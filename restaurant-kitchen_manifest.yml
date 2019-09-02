@@ -10,4 +10,5 @@ applications:
   - restaurant-kitchen-db
   - restaurant-queue
   - restaurant-autoscale
+  - restaurant-registry
   stack: cflinuxfs3
