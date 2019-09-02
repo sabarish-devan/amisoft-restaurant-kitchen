@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: restaurant_kitchen
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/kitchen
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+server:
+  port: 8004
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      expose: "*"
+
+
