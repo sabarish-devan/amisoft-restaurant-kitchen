@@ -4,6 +4,7 @@ package com.digi.kitchen.controller;
 import com.digi.kitchen.model.KitchenMenu;
 import com.digi.kitchen.model.KitchenResponse;
 import com.digi.kitchen.model.KitchenTicketDetails;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -42,6 +43,12 @@ public class KitchenController {
     public ResponseEntity<List<KitchenMenu>> getAllAvailableMenu (@RequestParam(value="type", defaultValue = "all") String menuType) {
 
         return null;
+    }
+
+    @GetMapping("/getAllKitchenTicket")
+    public ResponseEntity<KitchenResponse> getAllKitchenTicket () {
+
+        return new ResponseEntity<>(new KitchenResponse("Form Kitchen ticket"), HttpStatus.OK);
     }
 
 }
